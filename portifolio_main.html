@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Isabel Carvalho</title>
+    <link rel="stylesheet" href="portifolio.css">
+</head>
+
+<body>
+    <!-- Controla o tema escuro só com CSS (veja body:has(...) no portifolio.css) -->
+    <input type="checkbox" id="tema" class="dark-mode-toggle">
+
+    <div class="portifolio-container">
+
+        <header class="main-header">
+            <a href="portifolio_main.html" class="marca">Isabel Carvalho</a>
+
+            <nav class="nav-menu" aria-label="Navegação principal">
+                <a href="portifolio_main.html">Sobre mim</a>
+                <a href="projetos.html">Projetos</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+
+            <label for="tema" class="tema-label" title="Alternar tema claro/escuro">
+                <span aria-hidden="true">☀</span>
+                <span class="tema-switch"></span>
+                <span aria-hidden="true">☾</span>
+                <span class="sr-only" style="position:absolute;left:-9999px">Alternar tema escuro</span>
+            </label>
+        </header>
+
+        <main class="hero-section">
+            <h1 class="main-title">Estudante<br>de Tecnologia</h1>
+
+            <div class="descricao">
+                <p style="font-family: Space Mono;">Estudante do curso técnico em Informática para Internet, com background em Design de Moda. Em
+                    transição de carreira para a área de Cibersegurança, busco aprofundamento por meio de cursos e
+                    certificações. Combino visão analítica e atenção a detalhes com conhecimentos técnicos em redes,
+                    desenvolvimento web e segurança da informação.</p>
+
+                <p style="font-family: Space Mono;">Sou apaixonada por tecnologia e estou sempre em busca de novos desafios e oportunidades para
+                    crescer profissionalmente. Acredito que a aprendizagem contínua é essencial para o sucesso na área
+                    de TI, e estou comprometida em aprimorar minhas habilidades constantemente.</p>
+
+                <p style="font-family: Space Mono;">Estou aberta a oportunidades de estágio, projetos colaborativos e networking com profissionais da
+                    área. Se você quiser conversar sobre colaborações ou oportunidades, entre em contato comigo.</p>
+            </div>
+
+            <div class="hero-bottom">
+                <div class="photo-container">
+                    <img src="imgs/foto-perfil.png" alt="Foto de perfil de Isabel Carvalho" class="foto-perfil">
+                    <svg class="seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                        aria-hidden="true">
+                        <path d="M5 5 L19 19 M19 8 V19 H8" />
+                    </svg>
+                </div>
+                <h2 class="nome-grande">Isabel<br>Carvalho</h2>
+            </div>
+
+            <section class="info-grid">
+                <div>
+                    <h3>Idiomas</h3>
+                    <p style="font-family: 'Space Mono';">Inglês: fluente</p>
+                </div>
+
+                <div>
+                    <h3>Formação acadêmica</h3>
+                    <ul class="formacao">
+                        <li>
+                            Cecon
+                            <span style="font-family: 'Space Mono';">Técnico em Informática para Internet · abril de 2026 – novembro de 2027</span>
+                        </li>
+                        <li>
+                            UniAcademia - Centro Universitário
+                            <span style="font-family: 'Space Mono';">Tecnólogo em Design de Moda · fevereiro de 2024 – setembro de 2026</span>
+                        </li>
+                        <li>
+                            Microlins
+                            <span style="font-family: 'Space Mono';">Técnico em Informática · fevereiro de 2018 – novembro de 2019</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer class="hero-footer">
+            <div class="redes">
+                <a href="https://www.linkedin.com/in/isabel-carvalho-b2ab17210/" target="_blank" rel="noopener">
+                    <img src="imgs/linkedln-logo.svg" alt="LinkedIn" class="logo">
+                </a>
+                <a href="https://github.com/isabelcarvalhoTI" target="_blank" rel="noopener">
+                    <img src="imgs/github-logo.svg" alt="GitHub" class="logo">
+                </a>
+            </div>
+            <p>Projeto Integrador · Desenvolvimento Web · Aplicativos Gráficos para Web<br>
+                Professor: Vitor Gomes</p>
+            <p>&copy; 2026 Portfólio. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
