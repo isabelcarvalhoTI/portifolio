@@ -3,6 +3,7 @@
     src: url('fonts/Atteron Personal Use Only.ttf') format('truetype');
     font-display: swap;
 }
+
 @font-face {
     font-family: 'Space Mono';
     src: url('fonts/SpaceMono-Bold.ttf') format('truetype');
@@ -384,3 +385,42 @@ a:focus-visible {
     color: var(--texto);
     font-size: 0.85rem;
 }
+
+main .profile-image {
+    margin-top: 50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+    transition: all .5s;
+
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    object-position: center;
+    object-fit: cover;
+    bottom: 0;
+    left: 50%;
+
+}
+
+main .profile-image:hover {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.alunos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 160px;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+    letter-spacing: 4px;
+    text-shadow: 0 0 1px var(--destaque), 0px 4px 8px rgb(0 0 0 / 0.1);
+    color: #0f0f12;
+}
+
