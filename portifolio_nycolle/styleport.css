@@ -1,0 +1,439 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+:root {
+    --verde: #0b7a55;
+    --preto: #161616;
+    --cinza-texto: #555;
+    --linha: #d9d9d9;
+    --fundo-1: #fafafa;
+    --fundo-2: #f1f1f1;
+    --fundo-3: #e9e9e9;
+    --fonte-titulo: "Anton", "Arial Narrow", sans-serif;
+    --fonte-texto: "DM Sans", system-ui, sans-serif;
+    --fonte-numero: "DM Serif Display", Georgia, serif;
+}
+
+body {
+    font-family: var(--fonte-texto);
+    color: var(--preto);
+    background: var(--fundo-1);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* título pequeno com espaçamento entre letras */
+.titulo-secao {
+    font-size: .85rem;
+    font-weight: 600;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+/* ---------- Topo ---------- */
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    font-size: .7rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+.topo .logo {
+    font-family: var(--fonte-numero);
+    font-size: 1.2rem;
+    letter-spacing: 0;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    background: var(--fundo-1);
+    overflow: hidden;
+}
+
+.hero .container {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    align-items: end;
+    gap: 2rem;
+}
+
+.hero-texto {
+    padding-bottom: 3rem;
+}
+
+.hero h1 {
+    font-family: var(--fonte-titulo);
+    font-weight: 400;
+    font-size: clamp(3.5rem, 11vw, 9rem);
+    line-height: .92;
+    text-transform: uppercase;
+}
+
+.cargo {
+    margin-top: 1.5rem;
+    color: var(--verde);
+    font-size: .85rem;
+    font-weight: 500;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+.hero-texto p {
+    margin-top: 1.5rem;
+    max-width: 34ch;
+}
+
+.hero-texto::after {
+    /* linha verde curta */
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    margin-top: 3rem;
+    background: var(--verde);
+}
+
+/* foto com círculo verde atrás */
+.hero-foto {
+    position: relative;
+    align-self: end;
+}
+
+.hero-foto::before {
+    content: "";
+    position: absolute;
+    width: 85%;
+    aspect-ratio: 1;
+    top: 5%;
+    left: 5%;
+    border-radius: 50%;
+    background: var(--verde);
+}
+
+.hero-foto img {
+    position: relative;
+    /* fica na frente do círculo */
+    z-index: 1;
+    width: 100%;
+    filter: grayscale(1);
+}
+
+
+/* ---------- Projetos ---------- */
+.projetos {
+    background: var(--fundo-2);
+    padding: 3rem 0;
+}
+
+.projetos .container {
+    display: grid;
+    grid-template-columns: .8fr repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.projetos-intro p {
+    color: var(--cinza-texto);
+    font-size: .9rem;
+    max-width: 22ch;
+}
+
+.ver-todos {
+    display: inline-block;
+    margin-top: 3rem;
+    color: var(--verde);
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+}
+
+.card-projeto .cabecalho {
+    display: flex;
+    gap: .75rem;
+    align-items: baseline;
+    padding-bottom: .75rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--linha);
+}
+
+.card-projeto .num {
+    font-size: 1rem;
+}
+
+.card-projeto h3 {
+    font-size: .7rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+}
+
+.card-projeto small {
+    display: block;
+    color: var(--cinza-texto);
+    font-size: .75rem;
+    letter-spacing: 0;
+    text-transform: none;
+    font-weight: 400;
+}
+
+.card-projeto img,
+.card-projeto .img-placeholder {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    background: #cfcfcf;
+}
+
+/* ---------- Skills + Impacto ---------- */
+.skills-impacto {
+    padding: 3rem 0;
+    border-top: 1px solid var(--linha);
+}
+
+.skills-impacto .container {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 3rem;
+}
+
+.skills {
+    padding-right: 3rem;
+    border-right: 1px solid var(--linha);
+}
+
+.skill {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr auto;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: .9rem;
+    font-size: .7rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.barra {
+    height: 3px;
+    background: var(--linha);
+}
+
+.barra span {
+    display: block;
+    height: 100%;
+    background: var(--verde);
+}
+
+.numeros {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.numero {
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.numero+.numero {
+    border-left: 1px solid var(--linha);
+}
+
+.numero strong {
+    display: block;
+    font-family: var(--fonte-numero);
+    font-weight: 400;
+    font-size: 2.8rem;
+    line-height: 1;
+}
+
+.numero span {
+    font-size: .65rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--cinza-texto);
+}
+
+blockquote {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    border: 1px solid var(--linha);
+    font-size: .9rem;
+}
+
+blockquote::before {
+    content: "\201C";
+    font-family: var(--fonte-numero);
+    font-size: 3.5rem;
+    line-height: .8;
+    color: var(--verde);
+}
+
+blockquote cite {
+    display: block;
+    margin-top: .5rem;
+    font-style: normal;
+    font-size: .65rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--verde);
+}
+
+/* ---------- Contato ---------- */
+.contato {
+    background: var(--fundo-3);
+    padding: 3rem 0;
+}
+
+.contato .container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.contato-intro {
+    padding-right: 2rem;
+    border-right: 1px solid var(--linha);
+}
+
+.contato-intro h2 {
+    font-size: 1.4rem;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+
+.contato-intro p {
+    margin-top: 1rem;
+    font-size: .9rem;
+    color: var(--cinza-texto);
+    max-width: 24ch;
+}
+
+.contato-lista li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: .85rem;
+}
+
+.contato-lista .icone {
+    width: 28px;
+    height: 28px;
+    border: 1.5px solid var(--verde);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.contato-lista b {
+    display: block;
+    font-size: .6rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 160px;
+    padding: 1.5rem;
+    border: 1px solid var(--verde);
+    font-size: .75rem;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    transition: background .25s, color .25s;
+}
+
+.cta .seta {
+    align-self: flex-end;
+    color: var(--verde);
+    font-size: 1.4rem;
+    transition: color .25s;
+}
+
+.cta:hover {
+    background: var(--verde);
+    color: #fff;
+}
+
+.cta:hover .seta {
+    color: #fff;
+}
+
+.cta:focus-visible {
+    outline: 3px solid var(--preto);
+    outline-offset: 3px;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 900px) {
+    .projetos .container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .projetos-intro {
+        grid-column: 1 / -1;
+    }
+
+    .skills-impacto .container,
+    .contato .container {
+        grid-template-columns: 1fr;
+    }
+
+    .skills,
+    .contato-intro {
+        padding-right: 0;
+        border-right: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero .container {
+        grid-template-columns: 1fr;
+    }
+
+    .projetos .container {
+        grid-template-columns: 1fr;
+    }
+
+    .numeros {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .numero+.numero {
+        border-left: 0;
+    }
+}
