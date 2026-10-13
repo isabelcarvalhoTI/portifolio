@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'Atteron';
-    src: url('fonts/Atteron Personal Use Only.ttf') format('truetype');
+    src: url('fonts\Atteron Personal Use Only.ttf') format('truetype');
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Space Mono';
-    src: url('fonts/SpaceMono-Bold.ttf') format('truetype');
+    src: url('fonts\SpaceMono-Bold.ttf') format('truetype');
     font-display: swap;
 }
 
